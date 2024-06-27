@@ -1,0 +1,17 @@
+.landingMe-container-background {
+  //opacity: 20%;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 55px 5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 55px 5px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 55px 5px rgba(0, 0, 0, 0.75);
+}
+
+.landingMe-container-content {
+  color: black;
+  padding: 1rem;
+}
+
+.landingMe-container-content.h1 {
+  text-align: center;
+}

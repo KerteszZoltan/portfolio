@@ -1,4 +1,5 @@
 .panel {
+  position: relative;
   height: 100vh;
   width: 100%;
   display: flex;
@@ -7,7 +8,18 @@
 }
 
 .panel-content {
+  position: absolute;
   border-radius: 16px;
   max-height: 85vh;
   width: 90%;
+  -webkit-box-shadow: 0px 0px 55px 5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 55px 5px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 55px 5px rgba(0, 0, 0, 0.75);
+}
+
+.panel-content-text {
+  position: absolute;
+  inset: 1em;
+  justify-self: center;
+  align-self: center;
 }
