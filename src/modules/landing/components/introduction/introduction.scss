@@ -8,13 +8,12 @@
 
 .intoduction-container.head {
   @extend %text-stroke;
-  padding-left: 10%;
+  text-align: center;
   padding-top: 5%;
   font-weight: 700;
 }
 
 .intoduction-container.text {
   @extend %text-stroke;
-  width: 40%;
   font-weight: 700;
 }

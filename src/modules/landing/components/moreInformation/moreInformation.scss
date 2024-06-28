@@ -1,0 +1,14 @@
+@import "../../../../modules/common/styles/utilities.scss";
+@import "../../../../modules/common/styles/variables.scss";
+
+.moreInformation-container {
+  align-self: center;
+  padding: 1rem;
+}
+
+.moreInformation.button {
+  @extend %box-shadowes;
+  background-color: $primary_button-color;
+  margin-right: 1rem;
+  opacity: 0.7;
+}

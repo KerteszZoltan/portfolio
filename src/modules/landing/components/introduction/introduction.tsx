@@ -1,6 +1,6 @@
 import "./introduction.scss";
 
-export default function () {
+export default function Introduction() {
   return (
     <div className="intoduction-container">
       <h1 className="intoduction-container head">Zoltán Kertész</h1>
