@@ -1,5 +1,5 @@
 @import "./variables.scss";
-
+@import "./utilities.scss";
 * {
   box-sizing: border-box;
 }
@@ -52,4 +52,14 @@ p {
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   display: none;
+}
+
+.primary-title {
+  @extend %text-stroke;
+  font-weight: 700;
+}
+
+.secoundary-title {
+  @extend %text-stroke;
+  font-weight: 700;
 }

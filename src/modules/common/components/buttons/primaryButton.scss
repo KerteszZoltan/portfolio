@@ -1,0 +1,31 @@
+@import "../../../../modules/common/styles/utilities.scss";
+@import "../../../../modules/common/styles/variables.scss";
+
+.primary-button {
+  @extend %box-shadowes;
+  @extend %text-stroke;
+  height: 30px;
+  padding-left: 1rem;
+  padding-right: 0;
+  background-color: transparent;
+  margin-right: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  border: solid 1px $primary_button-color;
+  color: $primary_text-color;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+}
+
+.primary-button .arrow {
+  margin-left: 1rem;
+  background-color: $primary_button-color;
+  height: 30px;
+  width: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

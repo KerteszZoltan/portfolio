@@ -4,16 +4,17 @@
 .intoduction-container {
   color: $primary_text-color;
   padding: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  transform: translate(-50%, -50%);
 }
 
-.intoduction-container.head {
-  @extend %text-stroke;
-  text-align: center;
-  padding-top: 5%;
-  font-weight: 700;
+.intoduction-container .primary-title {
+  font-size: 40px;
+  padding-bottom: 10px;
 }
 
-.intoduction-container.text {
-  @extend %text-stroke;
-  font-weight: 700;
+.intoduction-container .secoundary-title {
+  padding-top: 10px;
 }

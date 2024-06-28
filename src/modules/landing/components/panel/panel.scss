@@ -2,7 +2,6 @@
 @import "../../../../modules/common/styles/utilities.scss";
 
 .panel {
-  position: relative;
   height: 100vh;
   width: 100%;
   display: flex;
@@ -12,10 +11,12 @@
 
 .panel-content {
   @extend %box-shadowes;
-  position: absolute;
+  border-radius: 15px;
+  position: relative;
   border-radius: 16px;
   max-height: 85vh;
   width: 90%;
+  overflow: hidden;
 }
 
 .panel-content-text {
