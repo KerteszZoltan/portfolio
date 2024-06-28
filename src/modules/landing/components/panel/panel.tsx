@@ -1,7 +1,6 @@
 import "./panel.scss";
 import BackgroundVideo from "../backgroundVideo/backgroundVideo";
-import landingMe from "../landing_me/landingMe";
-import LandingMe from "../landing_me/landingMe";
+import Intoduction from "../introduction/introduction";
 
 export default function Landing() {
   return (
@@ -9,7 +8,7 @@ export default function Landing() {
       <div className="panel-content">
         <BackgroundVideo />
         <div className="panel-content-text">
-          <LandingMe />
+          <Intoduction />
         </div>
       </div>
     </section>

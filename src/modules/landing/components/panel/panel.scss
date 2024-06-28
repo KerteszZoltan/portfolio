@@ -1,3 +1,6 @@
+@import "../../../../modules/common/styles/variables.scss";
+@import "../../../../modules/common/styles/utilities.scss";
+
 .panel {
   position: relative;
   height: 100vh;
@@ -8,13 +11,11 @@
 }
 
 .panel-content {
+  @extend %tesztvalami;
   position: absolute;
   border-radius: 16px;
   max-height: 85vh;
   width: 90%;
-  -webkit-box-shadow: 0px 0px 55px 5px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 0px 55px 5px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 55px 5px rgba(0, 0, 0, 0.75);
 }
 
 .panel-content-text {

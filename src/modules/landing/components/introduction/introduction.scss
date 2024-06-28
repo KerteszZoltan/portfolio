@@ -1,0 +1,10 @@
+@import "../../../../modules/common/styles/variables.scss";
+
+.intoduction-container-content {
+  color: $primary_text-color;
+  padding: 1rem;
+}
+
+.intoduction-container-content.h1 {
+  text-align: center;
+}
