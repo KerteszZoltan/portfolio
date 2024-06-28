@@ -1,10 +1,20 @@
 @import "../../../../modules/common/styles/variables.scss";
+@import "../../../../modules/common/styles/utilities.scss";
 
-.intoduction-container-content {
+.intoduction-container {
   color: $primary_text-color;
   padding: 1rem;
 }
 
-.intoduction-container-content.h1 {
-  text-align: center;
+.intoduction-container.head {
+  @extend %text-stroke;
+  padding-left: 10%;
+  padding-top: 5%;
+  font-weight: 700;
+}
+
+.intoduction-container.text {
+  @extend %text-stroke;
+  width: 40%;
+  font-weight: 700;
 }

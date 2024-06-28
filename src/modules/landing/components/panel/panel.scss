@@ -11,7 +11,7 @@
 }
 
 .panel-content {
-  @extend %tesztvalami;
+  @extend %box-shadowes;
   position: absolute;
   border-radius: 16px;
   max-height: 85vh;
@@ -21,6 +21,6 @@
 .panel-content-text {
   position: absolute;
   inset: 1em;
-  justify-self: center;
-  align-self: center;
+  display: flex;
+  flex-direction: row;
 }

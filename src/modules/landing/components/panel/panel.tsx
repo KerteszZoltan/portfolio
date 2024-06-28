@@ -9,6 +9,7 @@ export default function Landing() {
         <BackgroundVideo />
         <div className="panel-content-text">
           <Intoduction />
+          <div className="teszt">button</div>
         </div>
       </div>
     </section>
