@@ -52,23 +52,3 @@
   height: 32px;
   overflow: hidden;
 }
-
-/* floating form left to right and arrow change color
-.primary-button:after {
-  position: absolute;
-  content: "";
-  width: 0;
-  height: 32px;
-  background: $primary_button-color;
-  transition: all 0.35s;
-}
-
-.primary-button:hover .arrow {
-  background-color: transparent;
-  color: $primary_button-color;
-}
-
-.primary-button:hover:after {
-  width: 83%;
-}
-*/
