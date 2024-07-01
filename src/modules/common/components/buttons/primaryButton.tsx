@@ -15,7 +15,7 @@ export default function MoreInformation() {
       Learn More
       <div className="arrow">
         <FontAwesomeIcon
-          style={{ width: "32px", height: "32px" }}
+          style={{ width: "18px", height: "18px" }}
           icon={faPlay}
         />
       </div>
