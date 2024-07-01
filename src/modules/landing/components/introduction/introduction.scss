@@ -1,0 +1,11 @@
+@import "../../../../modules/common/styles/variables.scss";
+@import "../../../../modules/common/styles/utilities.scss";
+
+.intoduction-container {
+  color: $primary_text-color;
+  padding: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+}

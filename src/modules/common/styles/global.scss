@@ -1,0 +1,74 @@
+@import "./variables.scss";
+@import "./utilities.scss";
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $primary_background-color;
+  color: $primary_text-color;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+
+a {
+  border: none;
+  text-decoration: none;
+}
+
+input,
+select,
+option,
+textarea {
+  border: none;
+  outline: none;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  display: none;
+}
+
+.primary-title {
+  @extend %text-stroke;
+  font-weight: 700;
+  font-size: 60px;
+  padding-bottom: 40px;
+}
+
+.secoundary-title {
+  @extend %text-stroke;
+  font-weight: 300;
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+
+.spacer {
+  display: block;
+  padding-bottom: 50px;
+}
