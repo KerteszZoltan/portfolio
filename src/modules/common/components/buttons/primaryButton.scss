@@ -3,7 +3,6 @@
 
 .primary-button {
   @extend %box-shadowes;
-  @extend %text-stroke;
   height: 30px;
   padding-left: 0rem;
   padding-right: 0;
@@ -18,15 +17,22 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
+  width: 160px;
 }
 
 .title {
-  @extend %text-stroke;
   padding-left: 1rem;
   z-index: 2;
+  transition: all 2s;
+  width: 135px;
+  overflow: hidden;
+  z-index: 1;
 }
 
 .primary-button .arrow {
+  position: absolute;
+  top: 0;
+  right: 0;
   margin-left: 1rem;
   background-color: $primary_button-color;
   height: 30px;
@@ -38,6 +44,16 @@
   z-index: 2;
 }
 
+.primary-button:hover .arrow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 32px;
+  overflow: hidden;
+}
+
+/* floating form left to right and arrow change color
 .primary-button:after {
   position: absolute;
   content: "";
@@ -49,9 +65,10 @@
 
 .primary-button:hover .arrow {
   background-color: transparent;
-  color: #fff;
+  color: $primary_button-color;
 }
 
 .primary-button:hover:after {
-  width: 85%;
+  width: 83%;
 }
+*/

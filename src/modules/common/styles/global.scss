@@ -58,10 +58,17 @@ input[type="number"]::-webkit-inner-spin-button {
   @extend %text-stroke;
   font-weight: 700;
   font-size: 60px;
+  padding-bottom: 40px;
 }
 
 .secoundary-title {
   @extend %text-stroke;
   font-weight: 300;
   font-size: 30px;
+  padding-bottom: 20px;
+}
+
+.spacer {
+  display: block;
+  padding-bottom: 50px;
 }
