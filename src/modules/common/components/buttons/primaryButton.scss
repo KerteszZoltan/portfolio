@@ -5,7 +5,7 @@
   @extend %box-shadowes;
   @extend %text-stroke;
   height: 30px;
-  padding-left: 1rem;
+  padding-left: 0rem;
   padding-right: 0;
   background-color: transparent;
   margin-right: 1rem;
@@ -17,7 +17,13 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  justify-content: center;
+  position: relative;
+}
+
+.title {
+  @extend %text-stroke;
+  padding-left: 1rem;
+  z-index: 2;
 }
 
 .primary-button .arrow {
@@ -28,4 +34,24 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.35s;
+  z-index: 2;
+}
+
+.primary-button:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 32px;
+  background: $primary_button-color;
+  transition: all 0.35s;
+}
+
+.primary-button:hover .arrow {
+  background-color: transparent;
+  color: #fff;
+}
+
+.primary-button:hover:after {
+  width: 85%;
 }
