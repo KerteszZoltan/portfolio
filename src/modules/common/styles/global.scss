@@ -57,9 +57,11 @@ input[type="number"]::-webkit-inner-spin-button {
 .primary-title {
   @extend %text-stroke;
   font-weight: 700;
+  font-size: 60px;
 }
 
 .secoundary-title {
   @extend %text-stroke;
-  font-weight: 700;
+  font-weight: 300;
+  font-size: 30px;
 }

@@ -12,7 +12,7 @@ export default function MoreInformation() {
 
   return (
     <button className="primary-button" onClick={onClickHandl}>
-      Learn More
+      <p className="title">Learn more</p>
       <div className="arrow">
         <FontAwesomeIcon
           style={{ width: "18px", height: "18px" }}
