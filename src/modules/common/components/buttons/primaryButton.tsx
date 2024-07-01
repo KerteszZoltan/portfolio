@@ -1,24 +1,27 @@
 "use client";
 
-import { faArrowRight, faPlay } from "@fortawesome/free-solid-svg-icons";
 import "./primaryButton.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { width } from "@fortawesome/free-brands-svg-icons/fa42Group";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
-export default function MoreInformation() {
-  function onClickHandl() {
-    console.log("teszt");
-  }
+type ButtonProps = {
+  onClick: () => void;
+  text: string;
+  icon: IconProp;
+};
 
+const PrimaryButton = ({ onClick, text, icon }: ButtonProps) => {
   return (
-    <button className="primary-button" onClick={onClickHandl}>
-      <p className="title">Learn more</p>
+    <button className="primary-button" onClick={onClick}>
+      <p className="title">{text}</p>
       <div className="arrow">
         <FontAwesomeIcon
           style={{ width: "18px", height: "18px" }}
-          icon={faPlay}
+          icon={icon}
         />
       </div>
     </button>
   );
-}
+};
+
+export default PrimaryButton;

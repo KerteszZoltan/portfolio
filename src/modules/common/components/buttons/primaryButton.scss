@@ -21,7 +21,6 @@
 }
 
 .title {
-  padding-left: 1rem;
   z-index: 2;
   transition: all 2s;
   width: 135px;
@@ -42,6 +41,7 @@
   justify-content: center;
   transition: all 0.35s;
   z-index: 2;
+  color: $primary_background-color;
 }
 
 .primary-button:hover .arrow {
