@@ -10,7 +10,7 @@
   margin-right: 1rem;
   text-transform: uppercase;
   font-weight: 700;
-  border: solid 1px $primary_button-color;
+  border: solid 1px $primary_light2-color;
   color: $primary_text-color;
   display: flex;
   flex-direction: row;
@@ -33,7 +33,7 @@
   top: 0;
   right: 0;
   margin-left: 1rem;
-  background-color: $primary_button-color;
+  background-color: $primary_light2-color;
   height: 30px;
   width: 25px;
   display: flex;
@@ -41,7 +41,7 @@
   justify-content: center;
   transition: all 0.35s;
   z-index: 2;
-  color: $primary_background-color;
+  color: $primary_dark-color;
 }
 
 .primary-button:hover .arrow {
