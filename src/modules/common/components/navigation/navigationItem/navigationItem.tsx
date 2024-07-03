@@ -1,5 +1,6 @@
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import PrimaryButton from "../../buttons/primaryButton";
+import PrimaryLink from "../../links/primaryLink";
 
 type ItemProps = {
   title: string;
@@ -26,11 +27,21 @@ const NavigationItem = ({
       <p className="description">{description}</p>
       <span className="spacer"></span>
       <div className="button-container">
-        <PrimaryButton
-          onClick={function (): void {}}
-          text={title}
-          icon={icon}
-        />
+        {title !== "CV" && (
+          <PrimaryButton
+            onClick={function (): void {}}
+            text={title}
+            icon={icon}
+          />
+        )}
+        {title == "CV" && (
+          <PrimaryLink
+            onClick={function (): void {}}
+            text={title}
+            icon={icon}
+            href={"/assets/cv/english_cv.pdf"}
+          />
+        )}
       </div>
     </div>
   );

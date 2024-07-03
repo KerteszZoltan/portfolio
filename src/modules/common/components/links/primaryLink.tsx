@@ -8,11 +8,12 @@ type ButtonProps = {
   onClick: () => void;
   text: string;
   icon: IconProp;
+  href: string;
 };
 
-const PrimaryButton = ({ onClick, text, icon }: ButtonProps) => {
+const PrimaryLink = ({ onClick, text, icon, href }: ButtonProps) => {
   return (
-    <a className="primary-button" onClick={onClick}>
+    <a className="primary-button" href={href} onClick={onClick} download>
       <p className="title">{text}</p>
       <div className="arrow">
         <FontAwesomeIcon
@@ -24,4 +25,4 @@ const PrimaryButton = ({ onClick, text, icon }: ButtonProps) => {
   );
 };
 
-export default PrimaryButton;
+export default PrimaryLink;
