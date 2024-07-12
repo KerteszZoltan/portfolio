@@ -18,3 +18,13 @@
     rgb(0, 0, 0) 0.283662px -0.958924px 0px,
     rgb(0, 0, 0) 0.96017px -0.279415px 0px;
 }
+
+%linear-gradient {
+  background: rgb(82, 82, 89);
+  background: linear-gradient(
+    -30deg,
+    rgba(82, 82, 89, 1) 0%,
+    rgba(242, 233, 107, 1) 85%,
+    rgba(226, 242, 99, 1) 100%
+  );
+}

@@ -1,13 +1,13 @@
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
-import PrimaryButton from "../../buttons/primaryButton";
 import PrimaryLink from "../../links/primaryLink";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 type ItemProps = {
   title: string;
   introduction: string;
   description: string;
-  icon: IconProp;
-  logoUrl: string;
+  buttonIcon: IconProp;
+  logoIcon: IconProp;
   link: string;
 };
 
@@ -15,33 +15,25 @@ const NavigationItem = ({
   title,
   introduction,
   description,
-  icon,
-  logoUrl,
+  buttonIcon,
+  logoIcon,
   link,
 }: ItemProps) => {
   return (
     <div className="item-container">
-      <img src={logoUrl} alt={title}></img>
+      <FontAwesomeIcon className="img" icon={logoIcon} />
       <p className="primary-title">{title}</p>
       <p className="introduction">{introduction}</p>
       <p className="description">{description}</p>
       <span className="spacer"></span>
       <div className="button-container">
-        {title !== "CV" && (
-          <PrimaryButton
-            onClick={function (): void {}}
-            text={title}
-            icon={icon}
-          />
-        )}
-        {title == "CV" && (
-          <PrimaryLink
-            onClick={function (): void {}}
-            text={title}
-            icon={icon}
-            href={"/assets/cv/english_cv.pdf"}
-          />
-        )}
+        <PrimaryLink
+          onClick={function (): void {}}
+          text={title}
+          icon={buttonIcon}
+          href={link}
+          download={title === "CV" ? true : false}
+        />
       </div>
     </div>
   );

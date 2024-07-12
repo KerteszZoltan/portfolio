@@ -2,7 +2,6 @@
 @import "../../../../modules/common/styles/variables.scss";
 
 .primary-button {
-  @extend %box-strong-shadowe;
   height: 30px;
   padding-left: 0rem;
   padding-right: 0;
@@ -21,10 +20,10 @@
 }
 
 .title {
-  z-index: 2;
   transition: all 2s;
   width: 135px;
   overflow: hidden;
+  font-weight: 500;
   z-index: 1;
 }
 

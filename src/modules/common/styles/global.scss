@@ -55,7 +55,6 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .primary-title {
-  @extend %text-stroke;
   font-weight: 700;
   font-size: 60px;
   padding-bottom: 40px;
@@ -69,18 +68,18 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .introduction {
-  @extend %text-stroke;
   font-size: 15px;
-  font-weight: 100;
+  font-weight: 400;
   padding-bottom: 10px;
 }
 .description {
-  @extend %text-stroke;
   opacity: 0;
   font-size: 15px;
-  font-weight: 100;
+  font-weight: 400;
   padding-bottom: 10px;
   padding-top: 20%;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .spacer {

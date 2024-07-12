@@ -9,11 +9,24 @@ type ButtonProps = {
   text: string;
   icon: IconProp;
   href: string;
+  download?: boolean;
 };
 
-const PrimaryLink = ({ onClick, text, icon, href }: ButtonProps) => {
+const PrimaryLink = ({
+  onClick,
+  text,
+  icon,
+  href,
+  download = false,
+}: ButtonProps) => {
   return (
-    <a className="primary-button" href={href} onClick={onClick} download>
+    <a
+      className="primary-button"
+      href={href}
+      onClick={onClick}
+      download={download}
+      target="_blank"
+    >
       <p className="title">{text}</p>
       <div className="arrow">
         <FontAwesomeIcon
