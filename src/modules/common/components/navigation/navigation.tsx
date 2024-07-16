@@ -8,6 +8,8 @@ import Pagination from "../pagination/pagination";
 import { useNavStore } from "../../store/navigationStore";
 import PrimaryButton from "../buttons/primaryButton";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { motion } from "framer-motion";
+
 
 type NavigationProps = {
   navigation: NavigationType[];
@@ -15,9 +17,15 @@ type NavigationProps = {
 
 export default function Navigation({ navigation }: NavigationProps) {
   const { currentPage, isOpen,setCurrentPage, setIsOpen } = useNavStore();
+  const variants = {
+    open: { opacity: 1, x: 0 },
+    closed: { opacity: 0, x: "-100%" },
+  }
   //console.log(navigation);
 
   return (
+    <motion.nav animate={isOpen ? "open" : "closed"}
+    variants={variants}>
     <nav className="navigation-container">
       <div className="page-counter-container">
         <PrimaryButton onClick={()=>setIsOpen(!isOpen)} text={"Close navigation"} icon={faArrowLeft}/>
@@ -45,5 +53,6 @@ export default function Navigation({ navigation }: NavigationProps) {
         );
       })}
     </nav>
+    </motion.nav>
   );
 }
