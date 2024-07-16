@@ -5,7 +5,7 @@ interface NavStore {
   isOpen: boolean;
   currentPage: number;
   content: any[];
-  setIsOpen: () => void;
+  setIsOpen: (open:boolean) => void;
   setNotOpen: () => void;
   setCurrentPage: () => void;
   increaseCurrntPage: () => void;
@@ -16,7 +16,7 @@ export const useNavStore = create<NavStore>()((set) => ({
   isOpen: false,
   currentPage: 1,
   content: [],
-  setIsOpen: () => set((state) => ({ isOpen: (state.isOpen = true) })),
+  setIsOpen: (open) => set(() => ({ isOpen: open})),
   setNotOpen: () => set((state) => ({ isOpen: (state.isOpen = false) })),
   increaseCurrntPage: () =>
     set((state) => ({ currentPage: state.currentPage + 1 })),

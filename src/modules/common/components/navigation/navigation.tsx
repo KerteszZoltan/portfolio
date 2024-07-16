@@ -14,13 +14,13 @@ type NavigationProps = {
 };
 
 export default function Navigation({ navigation }: NavigationProps) {
-  const { currentPage,setCurrentPage, setNotOpen } = useNavStore();
+  const { currentPage, isOpen,setCurrentPage, setIsOpen } = useNavStore();
   //console.log(navigation);
 
   return (
     <nav className="navigation-container">
       <div className="page-counter-container">
-        <PrimaryButton onClick={setNotOpen} text={"Close navigation"} icon={faArrowLeft}/>
+        <PrimaryButton onClick={()=>setIsOpen(!isOpen)} text={"Close navigation"} icon={faArrowLeft}/>
         <div>
           <Pagination
             items={navigation}
