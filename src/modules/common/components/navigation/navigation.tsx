@@ -6,6 +6,8 @@ import { NavigationType } from "../../data/navigationData";
 import NavigationItem from "./navigationItem/navigationItem";
 import Pagination from "../pagination/pagination";
 import { useNavStore } from "../../store/navigationStore";
+import PrimaryButton from "../buttons/primaryButton";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 type NavigationProps = {
   navigation: NavigationType[];
@@ -18,9 +20,7 @@ export default function Navigation({ navigation }: NavigationProps) {
   return (
     <nav className="navigation-container">
       <div className="page-counter-container">
-        <button className="exit" onClick={setIsOpen}>
-          teszt
-        </button>
+        <PrimaryButton onClick={function (): void {} } text={"Close navigation"} icon={faArrowLeft}/>
         <div>
           <Pagination
             items={navigation}
