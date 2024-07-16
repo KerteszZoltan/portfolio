@@ -1,9 +1,12 @@
+"use client"
+
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import { Poppins } from "next/font/google";
 import "@/modules/common/styles/global.scss";
 import Navigation from "@/modules/common/components/navigation/navigation";
 import { contactData } from "@/modules/common/data/navigationData";
+import { useNavStore } from "@/modules/common/store/navigationStore";
 
 const inter = Roboto({ weight: "400", subsets: ["latin"] });
 const poppins = Poppins({
@@ -21,12 +24,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body className={inter.className}>
-        {children}
-        <Navigation navigation={contactData} />
-      </body>
-    </html>
-  );
+  const {isOpen} = useNavStore();
+    return (
+      <html lang="en">
+        <body className={poppins.className}>
+          {children}
+          {isOpen ? <Navigation navigation={contactData} /> : undefined}
+        </body>
+      </html>
+    );
+  
 }

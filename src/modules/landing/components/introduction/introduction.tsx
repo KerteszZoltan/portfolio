@@ -3,8 +3,10 @@ import PrimaryButton from "@/modules/common/components/buttons/primaryButton";
 import "./introduction.scss";
 import "@/modules/common/styles/global.scss";
 import { faPlay } from "@fortawesome/free-solid-svg-icons";
+import { useNavStore } from "@/modules/common/store/navigationStore";
 
 export default function Introduction() {
+  const {setIsOpen} = useNavStore();
   return (
     <div className="intoduction-container">
       <h3 className="secoundary-title">Zoltán Kertész</h3>
@@ -12,9 +14,7 @@ export default function Introduction() {
       <span className="spacer"></span>
 
       <PrimaryButton
-        onClick={function (): void {
-          console.log("pushed");
-        }}
+        onClick={setIsOpen}
         text={"Learn more"}
         icon={faPlay}
       />

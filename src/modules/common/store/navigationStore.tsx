@@ -6,7 +6,7 @@ interface NavStore {
   currentPage: number;
   content: any[];
   setIsOpen: () => void;
-  getIsOpen: () => void;
+  setNotOpen: () => void;
   setCurrentPage: () => void;
   increaseCurrntPage: () => void;
   setContent: (element: NavigationType[]) => void;
@@ -17,7 +17,7 @@ export const useNavStore = create<NavStore>()((set) => ({
   currentPage: 1,
   content: [],
   setIsOpen: () => set((state) => ({ isOpen: (state.isOpen = true) })),
-  getIsOpen: () => set((state) => ({ isOpen: state.isOpen })),
+  setNotOpen: () => set((state) => ({ isOpen: (state.isOpen = false) })),
   increaseCurrntPage: () =>
     set((state) => ({ currentPage: state.currentPage + 1 })),
   setCurrentPage: () => set((state) => ({ currentPage: state.currentPage })),
