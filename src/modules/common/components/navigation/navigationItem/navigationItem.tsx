@@ -20,12 +20,16 @@ const NavigationItem = ({
   link,
 }: ItemProps) => {
   return (
-    <div className="item-container">
-      <FontAwesomeIcon className="navigationIcon" icon={logoIcon} />
-      <p className="primary-title">{title}</p>
-      <p className="introduction">{introduction}</p>
-      <p className="description">{description}</p>
-      <span className="spacer"></span>
+    <div className="item">
+      <FontAwesomeIcon className="item-navigation-icon" icon={logoIcon} />
+      <p className="item-navigation-title">{title}</p>
+      <p className="item-navigation-introduction">{introduction}</p>
+      {description !== "" ? (
+        <p className="item-navigation-show-more">Show more</p>
+      ) : (
+        <p className="item-navigation-show-more"></p>
+      )}
+      <p className="item-navigation-description">{description}</p>
       <div className="button-container">
         <PrimaryLink
           onClick={function (): void {}}

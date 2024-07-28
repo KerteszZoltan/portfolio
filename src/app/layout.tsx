@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
@@ -24,14 +24,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const {isOpen} = useNavStore();
-    return (
-      <html lang="en">
-        <body className={poppins.className}>
-          {children}
-          {isOpen ? <Navigation navigation={contactData} /> : undefined}
-        </body>
-      </html>
-    );
-  
+  const { isOpen } = useNavStore();
+  return (
+    <html lang="en">
+      <body className={poppins.className}>
+        {children}
+        <Navigation />
+      </body>
+    </html>
+  );
 }

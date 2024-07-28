@@ -1,6 +1,6 @@
 "use client";
 
-import "./primaryButton.scss";
+import "./primaryLink.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
@@ -28,7 +28,7 @@ const PrimaryLink = ({
       target="_blank"
     >
       <p className="title">{text}</p>
-      <div className="arrow">
+      <div className="icon">
         <FontAwesomeIcon
           style={{ width: "18px", height: "18px" }}
           icon={icon}

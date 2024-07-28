@@ -1,6 +1,6 @@
 "use client";
 
-import "./primaryButton.scss";
+import "./primaryBackButton.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 
@@ -10,9 +10,9 @@ type ButtonProps = {
   icon: IconProp;
 };
 
-const PrimaryButton = ({ onClick, text, icon }: ButtonProps) => {
+const PrimaryBackButton = ({ onClick, text, icon }: ButtonProps) => {
   return (
-    <button className="primary-button" onClick={onClick}>
+    <button className="primary-back-button" onClick={onClick}>
       <p className="title">{text}</p>
       <div className="icon">
         <FontAwesomeIcon
@@ -24,4 +24,4 @@ const PrimaryButton = ({ onClick, text, icon }: ButtonProps) => {
   );
 };
 
-export default PrimaryButton;
+export default PrimaryBackButton;

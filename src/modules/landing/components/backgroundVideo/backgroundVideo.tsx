@@ -4,7 +4,7 @@ export default function BackgroundVideo() {
   return (
     <video
       src="/assets/videos/background_video.mp4"
-      className="backgroundVideo"
+      className="background-video"
       autoPlay
       muted
       loop

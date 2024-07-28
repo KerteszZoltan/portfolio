@@ -1,33 +1,15 @@
 @import "../../../../modules/common/styles/utilities.scss";
 @import "../../../../modules/common/styles/variables.scss";
+@import "./primaryButton.scss";
 
-.primary-button {
-  height: 30px;
-  padding-left: 0rem;
-  padding-right: 0;
-  background-color: transparent;
-  margin-right: 1rem;
-  text-transform: uppercase;
-  font-weight: 700;
+.primary-back-button {
+  @extend .primary-button;
+  //@extend %box-light-shadowes;
   border: solid 1px $primary_light2-color;
-  color: $primary_text-color;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  width: 160px;
+  transition: all 0.35s;
 }
 
-.title {
-  transition: all 2s;
-  width: 135px;
-  overflow: hidden;
-  font-weight: 500;
-  z-index: 1;
-}
-
-.primary-button .arrow {
+.primary-back-button .icon {
   position: absolute;
   top: 0;
   right: 0;
@@ -43,11 +25,17 @@
   color: $primary_dark-color;
 }
 
-.primary-button:hover .arrow {
+.primary-back-button:hover .icon {
   position: absolute;
+  background-color: rgb(129, 67, 67);
+  border: solid 1px rgb(129, 67, 67);
   top: 0;
   right: 0;
   width: 100%;
   height: 29px;
   overflow: hidden;
+}
+
+.primary-back-button:hover {
+  border: solid 1px rgb(129, 67, 67);
 }

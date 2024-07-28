@@ -4,35 +4,43 @@ import { useNavStore } from "../../store/navigationStore";
 type PaginationProps = {
   items: NavigationType[];
   currentPage: number;
-  increaseCurrntPage: () => void;
-  setCurrentPage: () => void;
-  setContent: (element: NavigationType[]) => void;
+  handlePrevPage: () => void;
+  handleNextPage: () => void;
 };
 
 const Pagination = ({ items }: PaginationProps) => {
-  const { currentPage, increaseCurrntPage } = useNavStore();
-  const pagesCount = Math.ceil(items.length / 3);
-  const pages = Array.from({ length: pagesCount }, (_, i) => i + 1);
+  const currentPage = useNavStore((state) => state.currentPage);
+  const setNextPage = useNavStore((state) => state.setNextPage);
+  const setPreviousPage = useNavStore((state) => state.setPreviousPage);
 
-  const isOne = pages.length;
+  const itemsPerPage = 3;
+  const startIndex = currentPage * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const currentItems = items.slice(startIndex, endIndex);
+  const handleNextPage = () => {
+    if (startIndex + itemsPerPage < items.length) {
+      setNextPage();
+    }
+  };
+  const handlePrevPage = () => {
+    if (currentPage > 0) {
+      setPreviousPage();
+    }
+  };
 
-  //console.log(pages);
-  if (pages.length != 1) {
-    return (
-      <>
-        {pages.map((page, index) => (
-          <button
-            key={index}
-            className="page-counter-item"
-            onClick={increaseCurrntPage}
-          >
-            {page}
-          </button>
-        ))}
-      </>
-    );
-  }
-  return <button className="page-counter-item">{"1"}</button>;
+  return (
+    <div>
+      <button onClick={handlePrevPage} disabled={currentPage === 0}>
+        Previous
+      </button>
+      <button
+        onClick={handleNextPage}
+        disabled={startIndex + itemsPerPage >= items.length}
+      >
+        Next
+      </button>
+    </div>
+  );
 };
 
 export default Pagination;
