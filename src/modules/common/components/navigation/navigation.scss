@@ -46,9 +46,8 @@
   border-bottom-right-radius: 10px;
 }
 
-.navigation-container .item-container:hover .img {
+.navigation-container .item-container:hover .navigationIcon {
   opacity: 0.6;
-  transform: translate(-50%, -50%) scale(0.6);
   top: 20%;
 }
 
@@ -62,14 +61,12 @@
   opacity: 1;
 }
 
-.item-container .img {
+.item-container .navigationIcon {
   opacity: 0;
-  width: 60%;
-  height: auto;
-  position: absolute;
+  width: auto;
+  height: 200px;
   top: 20%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  left: 90%;
   transition: all 1s;
   z-index: -1;
 }
@@ -97,8 +94,6 @@
   align-content: center;
   margin-right: 10px;
   margin-left: 10px;
-}
-.exit {
 }
 .button-container {
   position: absolute;

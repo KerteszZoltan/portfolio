@@ -21,7 +21,7 @@ const NavigationItem = ({
 }: ItemProps) => {
   return (
     <div className="item-container">
-      <FontAwesomeIcon className="img" icon={logoIcon} />
+      <FontAwesomeIcon className="navigationIcon" icon={logoIcon} />
       <p className="primary-title">{title}</p>
       <p className="introduction">{introduction}</p>
       <p className="description">{description}</p>

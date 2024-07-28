@@ -25,7 +25,8 @@ export default function Navigation({ navigation }: NavigationProps) {
 
   return (
     <motion.nav animate={isOpen ? "open" : "closed"}
-    variants={variants}>
+    variants={variants}
+    transition={{duration:1}}>
     <nav className="navigation-container">
       <div className="page-counter-container">
         <PrimaryButton onClick={()=>setIsOpen(!isOpen)} text={"Close navigation"} icon={faArrowLeft}/>
